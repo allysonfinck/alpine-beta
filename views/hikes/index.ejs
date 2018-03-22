@@ -2,9 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
     <title></title>
   </head>
   <body>
-    <h1>Hike Title Page</h1>
+    <% include ../partials/header %>
+
+    <div class="grid">
+      <% for(let i = 0; i < hikes.length; i++){ %>
+        <div class="hikeCard">
+          <a href="hikes/<%=hikes[i].id%>"><img src="<%=hikes[i].img%>" alt=""></a>
+          <a href="hikes/<%=hikes[i].id%>"><%=hikes[i].name%></a>
+          <a href="hikes/<%=hikes[i].id%>"><%=hikes[i].location%></a>
+        </div>
+      <% } %>
+    </div>
+
   </body>
 </html>

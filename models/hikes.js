@@ -5,7 +5,8 @@ const hikeSchema = new mongoose.Schema({
   description: String,
   location: String,
   difficulty: {type: Number, MinValue: 0},
-  pets: Boolean
+  pets: Boolean,
+  img: String
 })
 
 const Hike = mongoose.model('Hike', hikeSchema);

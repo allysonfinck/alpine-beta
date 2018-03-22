@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <title></title>
+  </head>
+  <body>
+
+<% include ../partials/header %>
+
+    <div id="container1">
+      <div id="header1">
+        <h2>Edit Hike</h2>
+      </div>
+      <div id="form1">
+        <form action="/hikes" method="POST">
+          <input type="text" name="name" value="" placeholder="Trail Name"><br/>
+          <input type="text" name="description" value="" placeholder="Description"><br/>
+          <input type="text" name="location" value="" placeholder="Location"><br/>
+          <input type="text" name="difficulty" value="" placeholder="Difficulty"><br/>
+          Pets Allowed
+            <input type="checkbox" name="pets"
+              <% if(hikes.pets){ %>
+                checked
+              <% } %>
+            ><br/>
+          <input type="text" name="img" value="" placeholder="Image URL"><br/>
+          <input type="submit" value="Submit Changes">
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
