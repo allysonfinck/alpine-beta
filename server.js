@@ -13,6 +13,9 @@ app.use(express.static('public'));
 const hikesController = require('./controllers/hikeposts.js');
 app.use('/hikes', hikesController);
 
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
 app.get('/', (req, res)=>{
   res.render('index.ejs');
 })
