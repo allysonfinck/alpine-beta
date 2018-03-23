@@ -36,3 +36,35 @@ text-align: center;
 .showPage h3 {
   margin: 20px;
 }
+
+/* HIKE EDIT NEW  */
+#hikeEditNewContainer {
+  padding: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  max-width: 70%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.hikeInput {
+  width: 80%;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.form-check {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#hikeEditNewContainer button {
+  display: block;
+  margin: 0 auto;
+}
+
+#hikeEditNewContainer h2 {
+  text-align: center;
+}

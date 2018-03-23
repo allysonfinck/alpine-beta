@@ -10,26 +10,39 @@
 
 <% include ../partials/header %>
 
-    <div id="container1">
+    <div id="hikeEditNewContainer">
       <div id="header1">
         <h2>Edit Hike</h2>
       </div>
-      <div id="form1">
-        <form action="/hikes" method="POST">
-          <input type="text" name="name" value="" placeholder="Trail Name"><br/>
-          <input type="text" name="description" value="" placeholder="Description"><br/>
-          <input type="text" name="location" value="" placeholder="Location"><br/>
-          <input type="text" name="difficulty" value="" placeholder="Difficulty"><br/>
-          Pets Allowed
-            <input type="checkbox" name="pets"
+
+        <form action="/hikes/<%=hikes.id%>?_method=PUT" method="POST">
+          <div class="form-group">
+            <input class="hikeInput" type="text" name="name" value="" placeholder="Trail Name">
+          </div>
+          <div class="form-group">
+            <input class="hikeInput" type="text" name="description" value="" placeholder="Description">
+          </div>
+          <div class="form-group">
+            <input class="hikeInput" type="text" name="location" value="" placeholder="Location">
+          </div>
+          <div class="form-group">
+            <input class="hikeInput" type="text" name="difficulty" value="" placeholder="Difficulty">
+          </div>
+
+          <div class="form-check">
+            <label class="form-check-label">Pets Allowed</label>
+            <input class="hikeInput" type="checkbox" name="pets"
               <% if(hikes.pets){ %>
                 checked
               <% } %>
-            ><br/>
-          <input type="text" name="img" value="" placeholder="Image URL"><br/>
-          <input type="submit" value="Submit Changes">
+              >
+            </div>
+            <div class="form-group">
+              <input class="hikeInput" type="text" name="img" value="" placeholder="Image URL">
+            </div>
+            <button class="btn btn-outline-light my-2 my-sm-0" style="background-color: #7c96c9;" type="submit">Submit Changes</button>
         </form>
-      </div>
+
     </div>
 
   </body>
