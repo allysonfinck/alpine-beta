@@ -17,16 +17,16 @@
 
         <form action="/hikes/<%=hikes.id%>?_method=PUT" method="POST">
           <div class="form-group">
-            <input class="hikeInput" type="text" name="name" value="" placeholder="Trail Name">
+            <input class="hikeInput" type="text" name="name" value="<%=hikes.name%>">
           </div>
           <div class="form-group">
-            <input class="hikeInput" type="text" name="description" value="" placeholder="Description">
+            <input class="hikeInput" type="text" name="description" value="<%=hikes.description%>">
           </div>
           <div class="form-group">
-            <input class="hikeInput" type="text" name="location" value="" placeholder="Location">
+            <input class="hikeInput" type="text" name="location" value="<%=hikes.location%>">
           </div>
           <div class="form-group">
-            <input class="hikeInput" type="text" name="difficulty" value="" placeholder="Difficulty">
+            <input class="hikeInput" type="text" name="difficulty" value="<%=hikes.difficulty%>">
           </div>
 
           <div class="form-check">
@@ -38,7 +38,7 @@
               >
             </div>
             <div class="form-group">
-              <input class="hikeInput" type="text" name="img" value="" placeholder="Image URL">
+              <input class="hikeInput" type="text" name="img" value="<%=hikes.img%>">
             </div>
             <button class="btn btn-outline-light my-2 my-sm-0" style="background-color: #7c96c9;" type="submit">Submit Changes</button>
         </form>

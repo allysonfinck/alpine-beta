@@ -48,10 +48,16 @@ router.get('/:id/edit', (req, res)=>{
 })
 
 router.put('/:id', (req, res)=>{
+  if(req.body.pets === 'on'){
+    req.body.pets = true;
+  } else {
+    req.body.pets = false;
+  }
   Hike.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHike)=>{
-    res.redirect('/hikes' + req.params.id)
+    res.redirect('/hikes');
   })
 })
+
 
 router.delete('/:id', (req, res)=>{
   Hike.findByIdAndRemove(req.params.id, (err, deletedHike)=>{

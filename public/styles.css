@@ -24,6 +24,7 @@ text-align: center;
 /* HIKE SHOW PAGE */
 .showPage {
 text-align: center;
+margin-bottom: 20px;
 }
 
 .showPage img {
@@ -37,6 +38,11 @@ text-align: center;
   margin: 20px;
 }
 
+.deleteBtn {
+  margin-top: 10px;
+}
+
+
 /* HIKE EDIT NEW  */
 #hikeEditNewContainer {
   padding: 20px;
@@ -44,7 +50,7 @@ text-align: center;
   border-radius: 5px;
   max-width: 70%;
   height: auto;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .hikeInput {
@@ -62,7 +68,7 @@ text-align: center;
 
 #hikeEditNewContainer button {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 #hikeEditNewContainer h2 {
