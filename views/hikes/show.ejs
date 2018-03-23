@@ -12,6 +12,18 @@
 
     <div class="showPage">
       <img src="<%=hikes.img%>" alt="">
+      <h3><%=hikes.name%></h3>
+      <p><%=hikes.location%></p>
+      <p><%=hikes.description%></p>
+      <p>Difficulty: <%=hikes.difficulty%></p>
+      <p>
+        <% if(hikes.pets === true){ %>
+          Pets Allowed
+        <% } else { %>
+          No Pets Allowed
+        <% } %>
+      </p>
+      <a href="<%=hikes.id%>/edit"><button class="btn btn-outline-light my-2 my-sm-0" style="background-color: #7c96c9;">Edit Hike</button></a>
     </div>
 
   </body>

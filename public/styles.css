@@ -23,7 +23,7 @@ text-align: center;
 
 /* HIKE SHOW PAGE */
 .showPage {
-
+text-align: center;
 }
 
 .showPage img {
@@ -31,4 +31,8 @@ text-align: center;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.showPage h3 {
+  margin: 20px;
 }
