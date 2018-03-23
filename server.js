@@ -32,6 +32,11 @@ app.get('/', (req, res)=>{
   });
 })
 
+app.get('/about', (req, res)=>{
+  res.render('about.ejs', {
+    currentUser: req.session.currentUser
+  });
+})
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/alpinebeta';
 mongoose.connect(mongoURI);

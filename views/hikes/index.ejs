@@ -12,8 +12,8 @@
     <div class="grid">
       <% for(let i = 0; i < hikes.length; i++){ %>
         <div class="hikeCard">
-          <a href="hikes/<%=hikes[i].id%>"><img src="<%=hikes[i].img%>" alt=""></a>
-          <a href="hikes/<%=hikes[i].id%>"><%=hikes[i].name%></a>
+          <a href="hikes/<%=hikes[i].id%>"><img src="<%=hikes[i].img%>" alt=""></a><br/>
+          <a href="hikes/<%=hikes[i].id%>"><%=hikes[i].name%></a><br/>
           <a href="hikes/<%=hikes[i].id%>"><%=hikes[i].location%></a>
         </div>
       <% } %>

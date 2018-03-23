@@ -2,12 +2,20 @@ const express = require('express');
 const router = express.Router();
 const Hike = require('../models/hikes.js');
 
+
 router.get('/new', (req, res)=>{
-  res.render('hikes/new.ejs');
+  res.render('hikes/new.ejs', {
+    currentUser: req.session.currentUser
+  });
 })
 
 router.post('/', (req, res)=>{
-  Hike.create(req.body, (err, createdHike)=>{
+  if(req.body.pets === 'on'){
+    req.body.pets = true;
+  } else {
+    req.body.pets = false;
+  }
+  Hike.create(req.body, ()=>{
     res.redirect('/hikes');
   })
 })
@@ -15,6 +23,7 @@ router.post('/', (req, res)=>{
 router.get('/', (req, res)=>{
   Hike.find({}, (err, allHikes)=>{
     res.render('hikes/index.ejs', {
+      currentUser: req.session.currentUser,
       hikes: allHikes
     })
   })
@@ -23,7 +32,8 @@ router.get('/', (req, res)=>{
 router.get('/:id', (req, res)=>{
   Hike.findById(req.params.id, (err, foundHike)=>{
     res.render('hikes/show.ejs', {
-      hikes: foundHikes
+      currentUser: req.session.currentUser,
+      hikes: foundHike
     })
   })
 })
@@ -31,7 +41,8 @@ router.get('/:id', (req, res)=>{
 router.get('/:id/edit', (req, res)=>{
   Hike.findById(req.params.id, (err, foundHike)=>{
     res.render('hikes/edit.ejs', {
-      hikes: foundHikes
+      currentUser: req.session.currentUser,
+      hikes: foundHike
     })
   })
 })
