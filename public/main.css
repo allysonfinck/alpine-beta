@@ -16,14 +16,14 @@ body {
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
-  color: grey;
+  color: black;
   font-size: 5vw;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 /* NEW USER */
 .newUserContainer {
   padding: 10px;
-
 }
 
 .createEditUser {
