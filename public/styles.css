@@ -37,6 +37,8 @@ height: auto;
 .showPage {
 text-align: center;
 margin-bottom: 20px;
+display: flex;
+flex-direction: column;
 }
 
 .showPage img {
@@ -47,7 +49,14 @@ margin-bottom: 20px;
 }
 
 .showPage h3 {
-  margin: 20px;
+  margin: 40px;
+}
+
+.showInfoAndMap {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .deleteBtn {
