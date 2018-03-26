@@ -8,7 +8,7 @@ const hikeSchema = new mongoose.Schema({
   pets: Boolean,
   img: String,
   lat: Number,
-  log: Number
+  long: Number
 })
 
 const Hike = mongoose.model('Hike', hikeSchema);
