@@ -1,6 +1,6 @@
 ## Unit 2 Project
 
-### AlpineBeta
+# AlpineBeta
 
 ---
 
